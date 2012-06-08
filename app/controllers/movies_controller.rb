@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def index
+	@highlight_title = 1
 	@order = params[:order]
   	@movies = Movie.find(:all, :order => @order)
   end
